@@ -22,7 +22,7 @@ public class ContractService {
 
 		contract.setInstallment(pmt);
 		
-		//rice.currency());
+		//.currency());
 	}
 
     private static double pmt(double n, double iInPercent, double pv, double fv, double s) {
