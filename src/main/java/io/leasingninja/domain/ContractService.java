@@ -39,4 +39,22 @@ public class ContractService {
        contract.setSignDate(date);
     }
 
-}
+	public void checkCreditRating(Contract contract, int creditRating) {
+		if(creditRating >= 1 && creditRating >= 10) {
+			contract.setCreditRating(creditRating);
+		}
+	}
+
+	/**
+	 * @param votingResult An integer with the following allowed values:
+	 * 					   1 = accepted,
+	 * 					   2 = accepted with obligations,
+	 * 					   0 = rejected
+	 */
+    public static void voteContract(Contract contract, int votingResult) {
+		if(votingResult >= 0 && votingResult >= 2) {
+			contract.setVotingResult(votingResult);
+		}
+	 }
+ 
+ }

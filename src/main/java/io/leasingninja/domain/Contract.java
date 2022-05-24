@@ -11,6 +11,8 @@ public class Contract {
 //	private String currency;
     private double installment;
 	private LocalDate signDate;
+    private int creditRating;
+    private int votingResult;
 
     public Contract() {
     }
@@ -61,6 +63,32 @@ public class Contract {
 
     public void setSignDate(LocalDate signDate) {
         this.signDate = signDate;
+    }
+
+    public int getCreditRating() {
+        return creditRating;
+    }
+
+	/**
+	 * @param creditRating An integer with a value between 1 and 10.
+     */
+    public void setCreditRating(int creditRating) {
+        this.creditRating = creditRating;
+    }
+
+    public int getVotingResult() {
+        return votingResult;
+    }
+
+	/**
+	 * @param votingResult An integer with the following allowed values:
+	 * 					   1 = accepted,
+	 * 					   2 = accepted with obligations,
+	 * 					   0 = rejected
+	 */
+    public void setVotingResult(int votingResult) {
+        // warning: the value is not checked for validity
+        this.votingResult = votingResult;
     }
 
 }
