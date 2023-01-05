@@ -1,2 +1,5 @@
 # Maven
 target/
+
+# Sonargraph
+*.sonargraph
