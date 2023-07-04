@@ -21,13 +21,13 @@ public class ContractService {
 		pmt = ((double) Math.round(pmt * 100)) / 100;
 
 		contract.setInstallment(pmt);
-		
+
 		//.currency());
 	}
 
     private static double pmt(double n, double iInPercent, double pv, double fv, double s) {
 		double i = iInPercent / 100;
-        
+
         if (i == 0) {
             return (-1 * pv - fv) / n;
         }
@@ -52,9 +52,9 @@ public class ContractService {
 	 * 					   0 = rejected
 	 */
     public static void voteContract(Contract contract, int votingResult) {
-		if(votingResult >= 0 && votingResult >= 2) {
+		if(votingResult >= 0 && votingResult <= 2) {
 			contract.setVotingResult(votingResult);
 		}
 	 }
- 
+
  }
