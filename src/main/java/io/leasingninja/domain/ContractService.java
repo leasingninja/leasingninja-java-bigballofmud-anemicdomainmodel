@@ -40,7 +40,7 @@ public class ContractService {
     }
 
 	public void checkCreditRating(Contract contract, int creditRating) {
-		if(creditRating >= 1 && creditRating >= 10) {
+		if(creditRating >= 1 && creditRating <= 10) {
 			contract.setCreditRating(creditRating);
 		}
 	}
