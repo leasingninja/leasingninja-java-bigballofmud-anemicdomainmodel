@@ -2,12 +2,23 @@ package io.leasingninja.domain;
 
 import java.time.LocalDate;
 
+// TODO: javax or jakarta?
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "contracts")
 public class Contract {
 
+    @Id
     private String contractNumber;
 	private String lessee;
 	private String car;
+	@Column(name = "price_amount")
 	private double price;
+	@Column(name = "price_currency")
 //	private String currency;
     private double installment;
 	private LocalDate signDate;
