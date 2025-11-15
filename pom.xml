@@ -25,7 +25,7 @@
 		<!-- Libraries for test -->
 		<junit.jupiter.version>6.0.0</junit.jupiter.version>
 		<junit.platform.version>1.10.3</junit.platform.version>
-		<assertj.version>3.27.3</assertj.version>
+		<assertj.version>3.27.6</assertj.version>
 	</properties>
 
 	<dependencyManagement>
